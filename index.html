@@ -42,6 +42,30 @@
 
         button:hover {
             background-color: #6f4518;
+			.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.links a {
+    display: block;
+    padding: 15px;
+    background-color: #556b2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background-color: #6b8e23;
+    transform: translateY(-2px);
+}
         }
     </style>
 </head>
@@ -51,16 +75,11 @@
     <img src="paznokcie.jpg" alt="Stylizacja paznokci" class="hero-image">
 
     <header>
-        <h1>No to pięknie!</h1>
+        <h1>Piękne paznokcie na każdą okazję!</h1>
     </header>
 
     <main>
         <h2>Iwona Bieńkowska</h2>
-        <p>Piękne paznokcie na każdą okazję.</p>
-
-        <button onclick="powitanie()">
-            Kontakt
-        </button>
     </main>
 
     <script>
@@ -73,15 +92,23 @@
     <h3>Szybkie linki</h3>
 
     <div class="links">
-        <a href="#kontakt">📞 Kontakt</a>
-        <a href="galeria.html">📸 Galeria</a>
-        <a href="#umow">💅 Umów wizytę</a>
-        <a href="https://instagram.com/notopieknie_iwonabienkowska"
-           target="_blank" rel="noopener noreferrer">
-            📷 Instagram
+
+        <a href="https://www.facebook.com/profile.php?id=100008602985310"
+           target="_blank">
+           📞 Kontakt
         </a>
-    </div>
-</section>
+
+        <a href="galeria.html">
+           📸 Galeria
+        </a>
+
+        <a href="https://booksy.com/pl-pl/121304_no-to-pieknie-wizaz-i-kosmetyka_paznokcie_22068_bydgoszcz"
+           target="_blank">
+           💅 Umów wizytę
+        </a>
+
+        <a href="https://instagram.com/notopieknie_iwonabienkowska"
+           target="_blank">
 
 <footer>
     <p>© 2026 No to pięknie! | Iwona Bieńkowska</p>
