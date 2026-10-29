@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria - No to pięknie!</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f1e8;
-            color: #4a3b2a;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f6faf7;
+            color: #4f5f57;
             text-align: center;
             margin: 0;
             padding: 20px;
         }
 
         h1 {
-            color: #556b2f;
+            color: #7ea696;
+            margin-bottom: 30px;
         }
 
         .gallery {
@@ -28,21 +33,43 @@
 
         .gallery img {
             width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(126, 166, 150, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
         }
 
         .back {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            background: #8b5a2b;
+            margin-top: 40px;
+            padding: 15px 25px;
+            background: #7ea696;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 15px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(126, 166, 150, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .back:hover {
+            background: #6b9583;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background: #dfece5;
+            color: #4f5f57;
+            font-size: 14px;
         }
     </style>
 </head>
+
 <body>
 
     <h1>Galeria stylizacji</h1>
@@ -51,10 +78,22 @@
         <img src="galeria1.jpg" alt="Paznokcie 1">
         <img src="galeria2.jpg" alt="Paznokcie 2">
         <img src="galeria3.jpg" alt="Paznokcie 3">
-	<img src="galeria4.jpg" alt="Paznokcie 4">
-	<img src="galeria5.jpg" alt="Paznokcie 5">
-	<img src="galeria6.jpg" alt="Paznokcie 6">
-	<img src="galeria7.jpg" alt="Paznokcie 7">
-	<img src="galeria8.jpg" alt="Paznokcie 8">
-	<img src="galeria9.jpg" alt="Paznokcie 9">
-	<img src="galeria10.jpg" alt="Paznokcie 10">
+        <img src="galeria4.jpg" alt="Paznokcie 4">
+        <img src="galeria5.jpg" alt="Paznokcie 5">
+        <img src="galeria6.jpg" alt="Paznokcie 6">
+        <img src="galeria7.jpg" alt="Paznokcie 7">
+        <img src="galeria8.jpg" alt="Paznokcie 8">
+        <img src="galeria9.jpg" alt="Paznokcie 9">
+        <img src="galeria10.jpg" alt="Paznokcie 10">
+    </div>
+
+    <a href="index.html" class="back">
+        ← Powrót do strony głównej
+    </a>
+
+    <footer>
+        <p>© 2026 No to pięknie! | Iwona Bieńkowska</p>
+    </footer>
+
+</body>
+</html>
