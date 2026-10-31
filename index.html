@@ -7,8 +7,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
 <style>
 
 *{
@@ -17,10 +17,17 @@
 
 body{
     margin:0;
-    font-family:'Poppins',sans-serif;
+    font-family:'Montserrat',sans-serif;
     background:#f6faf7;
     color:#4f5f57;
     overflow-x:hidden;
+}
+
+h1,
+h2,
+h3{
+    font-family:'Cormorant Garamond',serif;
+    letter-spacing:1px;
 }
 
 .hero-image{
@@ -39,11 +46,14 @@ header{
 
 header h1{
     margin:0;
-    font-size:2.5rem;
+    font-size:3rem;
+    font-weight:600;
+    letter-spacing:2px;
 }
 
 header p{
     margin-top:8px;
+    font-size:1rem;
 }
 
 .container{
@@ -92,6 +102,8 @@ header p{
 
 .profile-info h2{
     margin:0;
+    font-size:2rem;
+    font-weight:600;
 }
 
 .profile-info p{
@@ -111,6 +123,11 @@ header p{
     top:20px;
 }
 
+.links-card h3{
+    text-align:center;
+    margin-top:0;
+}
+
 .links{
     display:flex;
     flex-direction:column;
@@ -126,11 +143,14 @@ header p{
     border-radius:15px;
     text-align:center;
     font-weight:600;
-    transition:.3s;
+    letter-spacing:0.5px;
+    transition:all .3s ease;
+    box-shadow:0 4px 10px rgba(126,166,150,.25);
 }
 
 .links a:hover{
     background:#6b9583;
+    transform:translateY(-3px);
 }
 
 footer{
@@ -139,10 +159,13 @@ footer{
     padding:20px;
     background:#dfece5;
 }
+
+/* TELEFONY */
+
 @media (max-width:768px){
 
     .hero-image{
-        height:250px;
+        height:220px;
     }
 
     header{
@@ -150,7 +173,7 @@ footer{
     }
 
     header h1{
-        font-size:1.8rem;
+        font-size:2rem;
     }
 
     header p{
@@ -180,6 +203,10 @@ footer{
         height:120px;
     }
 
+    .profile-info h2{
+        font-size:1.8rem;
+    }
+
     .links-card{
         position:static;
     }
@@ -191,8 +218,10 @@ footer{
 
     .about-text{
         text-align:left;
+        font-size:15px;
     }
 }
+
 </style>
 </head>
 
@@ -201,8 +230,8 @@ footer{
 <img src="paznokcie.jpg" alt="Stylizacja paznokci" class="hero-image">
 
 <header>
-    <h2>No to pięknie!</h2>
-    <h3>Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</h3>
+    <h1>No to pięknie!</h1>
+    <h2>Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</h2>
 </header>
 
 <div class="container">
