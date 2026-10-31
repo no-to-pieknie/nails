@@ -5,129 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria | No to pięknie!</title>
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-       <style>
 
-*{
-    box-sizing:border-box;
-}
+        *{
+            box-sizing:border-box;
+        }
 
-body{
-    font-family:'Montserrat',sans-serif;
-    margin:0;
-    padding:0;
-    text-align:center;
-    background-color:#f6faf7;
-    color:#4f5f57;
-}
+        body{
+            font-family:'Cormorant Garamond',serif;
+            margin:0;
+            padding:0;
+            text-align:center;
+            background-color:#f6faf7;
+            color:#4f5f57;
+        }
 
-h1,
-h2,
-h3{
-    font-family:'Cormorant Garamond',serif;
-    letter-spacing:1px;
-}
+        header{
+            background-color:#7ea696;
+            color:white;
+            padding:25px;
+        }
 
-header{
-    background-color:#7ea696;
-    color:white;
-    padding:25px;
-}
+        h1{
+            margin-bottom:5px;
+            font-size:3rem;
+            font-weight:600;
+            letter-spacing:2px;
+        }
 
-h1{
-    margin-bottom:5px;
-    font-size:3rem;
-    font-weight:600;
-    letter-spacing:2px;
-}
+        h2{
+            font-size:2.2rem;
+            font-weight:600;
+        }
 
-h2{
-    font-size:2rem;
-    font-weight:600;
-}
+        header p{
+            font-size:1.3rem;
+        }
 
-.container{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-}
+        .container{
+            max-width:1200px;
+            margin:40px auto;
+            padding:0 20px;
+        }
 
-.gallery-box{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 4px 15px rgba(126,166,150,0.2);
-}
+        .gallery-box{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 4px 15px rgba(126,166,150,0.2);
+        }
 
-.gallery-box p{
-    font-size:18px;
-    margin-bottom:30px;
-    line-height:1.8;
-}
+        .gallery-box p{
+            font-size:22px;
+            margin-bottom:30px;
+            line-height:1.8;
+        }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+        .gallery-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
 
-.gallery-grid img{
-    width:100%;
-    height:320px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:all .3s ease;
-    box-shadow:0 4px 10px rgba(126,166,150,.2);
-}
+        .gallery-grid img{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            border-radius:15px;
+            transition:all .3s ease;
+            box-shadow:0 4px 10px rgba(126,166,150,.2);
+        }
 
-.gallery-grid img:hover{
-    transform:scale(1.03);
-}
+        .gallery-grid img:hover{
+            transform:scale(1.03);
+        }
 
-.back-link{
-    display:inline-block;
-    margin-top:30px;
-    color:#7ea696;
-    text-decoration:none;
-    font-weight:600;
-}
+        .back-link{
+            display:inline-block;
+            margin-top:30px;
+            color:#7ea696;
+            text-decoration:none;
+            font-size:22px;
+            font-weight:600;
+        }
 
-footer{
-    margin-top:60px;
-    padding:20px;
-    background:#dfece5;
-    color:#4f5f57;
-    font-size:14px;
-}
+        footer{
+            margin-top:60px;
+            padding:20px;
+            background:#dfece5;
+            color:#4f5f57;
+            font-size:18px;
+        }
 
-@media (max-width:768px){
+        @media (max-width:768px){
 
-    h1{
-        font-size:2.1rem;
-    }
+            h1{
+                font-size:2.2rem;
+            }
 
-    h2{
-        font-size:1.8rem;
-    }
+            h2{
+                font-size:1.8rem;
+            }
 
-    .gallery-grid img{
-        height:250px;
-    }
+            .gallery-box p{
+                font-size:20px;
+            }
 
-}
+            .gallery-grid img{
+                height:250px;
+            }
 
-</style>
+        }
+
+    </style>
 </head>
 
 <body>
 
     <header>
         <h1>Galeria</h1>
-      <p>No to pięknie! • Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</p>
+        <p>No to pięknie! • Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</p>
     </header>
 
     <div class="container">
@@ -164,15 +165,16 @@ footer{
                 <img src="galeria19.jpg" alt="Stylizacja paznokci 19">
                 <img src="galeria20.jpg" alt="Stylizacja paznokci 20">
                 <img src="galeria21.jpg" alt="Stylizacja paznokci 21">
-                <img src="galeria22.jpg" alt="Stylizacja paznokci 22">         
+                <img src="galeria22.jpg" alt="Stylizacja paznokci 22">
                 <img src="galeria23.jpg" alt="Stylizacja paznokci 23">
-                <img src="galeria24.jpg" alt="Stylizacja paznokci 24">     
+                <img src="galeria24.jpg" alt="Stylizacja paznokci 24">
                 <img src="galeria25.jpg" alt="Stylizacja paznokci 25">
                 <img src="galeria26.jpg" alt="Stylizacja paznokci 26">
-                <img src="galeria27.jpg" alt="Stylizacja paznokci 27">         
+                <img src="galeria27.jpg" alt="Stylizacja paznokci 27">
                 <img src="galeria28.jpg" alt="Stylizacja paznokci 28">
                 <img src="galeria29.jpg" alt="Stylizacja paznokci 29">
                 <img src="galeria30.jpg" alt="Stylizacja paznokci 30">
+
             </div>
 
         </div>
