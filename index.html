@@ -12,13 +12,14 @@
 <style>
 
 :root{
-    --primary:#D89ACF;
-    --primary-dark:#C17CB6;
-    --accent:#F2DCCF;
-    --bg:#FCF8FA;
+    --primary:#AA93A0;      /* przygaszony pudrowy róż */
+    --primary-dark:#8E7884;
+    --accent:#D8D3D0;       /* jasny szaro-beżowy */
+    --bg:#F7F5F3;
     --card:#FFFFFF;
-    --text:#5E5263;
-    --text-light:#8D7D92;
+    --text:#4D5053;
+    --text-light:#7B7E81;
+    --shadow:rgba(0,0,0,.06);
 }
 
 *{
@@ -33,16 +34,14 @@ body{
     overflow-x:hidden;
 }
 
-h1,
-h2,
-h3{
+h1,h2,h3{
     font-family:'Cormorant Garamond',serif;
     letter-spacing:1px;
 }
 
 .hero-image{
     width:100%;
-    height:800px;
+    height:700px;
     object-fit:cover;
     display:block;
 }
@@ -50,27 +49,27 @@ h3{
 header{
     background:linear-gradient(
         135deg,
-        #F2DCCF 0%,
-        #EAC6D8 45%,
-        #D89ACF 100%
+        #E8E2DE 0%,
+        #D9D4D1 50%,
+        #B19CA8 100%
     );
+
     color:white;
     text-align:center;
     padding:35px 20px;
-    box-shadow:0 5px 20px rgba(216,154,207,.25);
 }
 
 header h1{
     margin:0;
     font-size:3rem;
-    font-weight:700;
+    font-weight:600;
     letter-spacing:3px;
 }
 
 header h2{
     margin-top:10px;
     font-size:1.3rem;
-    font-weight:500;
+    font-weight:400;
 }
 
 .container{
@@ -96,11 +95,11 @@ header h2{
 
 .profile-card,
 .links-card{
-    background:var(--card);
+    background:white;
     border-radius:25px;
     padding:30px;
-    box-shadow:0 10px 30px rgba(216,154,207,.12);
-    border:1px solid rgba(216,154,207,.15);
+    border:1px solid #E7E3E1;
+    box-shadow:0 10px 25px var(--shadow);
 }
 
 .profile-top{
@@ -115,12 +114,12 @@ header h2{
     height:140px;
     object-fit:cover;
     border-radius:50%;
-    border:6px solid var(--accent);
+    border:5px solid var(--accent);
 }
 
 .profile-info h2{
     margin:0;
-    font-size:2.2rem;
+    font-size:2rem;
     color:var(--primary-dark);
 }
 
@@ -140,11 +139,6 @@ header h2{
     top:20px;
 }
 
-.links-card h3{
-    text-align:center;
-    margin-top:0;
-}
-
 .links{
     display:flex;
     flex-direction:column;
@@ -154,33 +148,31 @@ header h2{
 .links a{
     display:block;
     text-decoration:none;
-    background:linear-gradient(
-        135deg,
-        var(--primary),
-        var(--primary-dark)
-    );
+    background:#7F858A;
     color:white;
     padding:16px;
     border-radius:15px;
     text-align:center;
     font-weight:600;
-    letter-spacing:0.5px;
-    transition:all .3s ease;
-    box-shadow:0 8px 20px rgba(216,154,207,.30);
+    letter-spacing:.5px;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(127,133,138,.25);
 }
 
 .links a:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 25px rgba(216,154,207,.40);
+    background:#676C71;
+    transform:translateY(-2px);
 }
 
 footer{
     margin-top:60px;
     text-align:center;
     padding:25px;
-    background:var(--accent);
-    color:var(--text);
+    background:#D8D3D0;
+    color:#4D5053;
 }
+
+/* TELEFONY */
 
 @media (max-width:768px){
 
