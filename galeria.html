@@ -1,193 +1,332 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria | No to pięknie!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Galeria | No to pięknie!</title>
 
-    <style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        *{
-            box-sizing:border-box;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        body{
-            font-family:'Cormorant Garamond',serif;
-            margin:0;
-            padding:0;
-            text-align:center;
-            background-color:#f6faf7;
-            color:#4f5f57;
-        }
+<style>
 
-        header{
-            background-color:#7ea696;
-            color:white;
-            padding:25px;
-        }
+:root{
+    --cream:#E4D8A8;
+    --rose:#C8A09C;
+    --rose-dark:#A27F7C;
 
-        h1{
-            margin-bottom:5px;
-            font-size:3rem;
-            font-weight:600;
-            letter-spacing:2px;
-        }
+    --gray:#A3A094;
+    --gray-dark:#878375;
 
-        h2{
-            font-size:2.2rem;
-            font-weight:600;
-        }
+    --brown:#68484A;
+    --brown-dark:#523739;
 
-        header p{
-            font-size:1.3rem;
-        }
+    --background:#F9F6F2;
 
-        .container{
-            max-width:1200px;
-            margin:40px auto;
-            padding:0 20px;
-        }
+    --card:#FFFFFF;
+    --text:#53484A;
+    --text-light:#83777A;
 
-        .gallery-box{
-            background:white;
-            padding:30px;
-            border-radius:20px;
-            box-shadow:0 4px 15px rgba(126,166,150,0.2);
-        }
+    --border:#ECE5DE;
+}
 
-        .gallery-box p{
-            font-size:22px;
-            margin-bottom:30px;
-            line-height:1.8;
-        }
+*{
+    box-sizing:border-box;
+}
 
-        .gallery-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:20px;
-        }
+body{
+    margin:0;
+    background:var(--background);
+    color:var(--text);
+    font-family:'Montserrat',sans-serif;
+}
 
-        .gallery-grid img{
-            width:100%;
-            height:320px;
-            object-fit:cover;
-            border-radius:15px;
-            transition:all .3s ease;
-            box-shadow:0 4px 10px rgba(126,166,150,.2);
-        }
+/* HEADER */
 
-        .gallery-grid img:hover{
-            transform:scale(1.03);
-        }
+header{
+    background:linear-gradient(
+        180deg,
+        var(--cream) 0%,
+        var(--rose) 50%,
+        var(--brown) 100%
+    );
 
-        .back-link{
-            display:inline-block;
-            margin-top:30px;
-            color:#7ea696;
-            text-decoration:none;
-            font-size:22px;
-            font-weight:600;
-        }
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
 
-        footer{
-            margin-top:60px;
-            padding:20px;
-            background:#dfece5;
-            color:#4f5f57;
-            font-size:18px;
-        }
+header h1{
+    margin:0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    font-weight:600;
+    letter-spacing:4px;
+}
 
-        @media (max-width:768px){
+header p{
+    margin-top:12px;
+    font-size:1.1rem;
+}
 
-            h1{
-                font-size:2.2rem;
-            }
+/* CONTENT */
 
-            h2{
-                font-size:1.8rem;
-            }
+.container{
+    max-width:1400px;
+    margin:50px auto;
+    padding:0 20px;
+}
 
-            .gallery-box p{
-                font-size:20px;
-            }
+.gallery-box{
+    background:white;
+    border-radius:25px;
+    padding:40px;
 
-            .gallery-grid img{
-                height:250px;
-            }
+    border:1px solid var(--border);
 
-        }
+    box-shadow:
+        0 5px 15px rgba(104,72,74,.04),
+        0 15px 35px rgba(104,72,74,.08);
+}
 
-    </style>
+.gallery-box h2{
+    margin-top:0;
+
+    text-align:center;
+
+    color:var(--rose-dark);
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.8rem;
+    font-weight:600;
+}
+
+.gallery-box p{
+    max-width:850px;
+    margin:0 auto 40px;
+
+    text-align:center;
+    line-height:1.8;
+
+    color:var(--text-light);
+}
+
+/* GALERIA */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.05);
+}
+
+.gallery-grid img:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(104,72,74,.15);
+}
+
+/* PRZYCISKI */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+    margin-top:40px;
+}
+
+.button{
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.button-back{
+    background:var(--gray);
+}
+
+.button-back:hover{
+    background:var(--gray-dark);
+}
+
+.button-booksy{
+    background:var(--rose);
+}
+
+.button-booksy:hover{
+    background:var(--rose-dark);
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+
+    background:var(--brown);
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+footer p{
+    margin:0;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    header{
+        padding:35px 15px;
+    }
+
+    header h1{
+        font-size:2rem;
+    }
+
+    header p{
+        font-size:.95rem;
+    }
+
+    .gallery-box{
+        padding:20px;
+    }
+
+    .gallery-box h2{
+        font-size:2rem;
+    }
+
+    .gallery-box p{
+        font-size:15px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img{
+        height:280px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Galeria</h1>
-        <p>No to pięknie! • Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</p>
-    </header>
+<header>
+    <h1>GALERIA</h1>
+    <p>No to pięknie! • Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</p>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <div class="gallery-box">
+    <div class="gallery-box">
 
-            <h2>Moje stylizacje</h2>
+        <h2>Moje stylizacje</h2>
 
-            <p>
-                Kilka wybranych realizacji. Zapraszam również na Instagram,
-                gdzie regularnie publikuję nowe stylizacje.
-            </p>
+        <p>
+            Kilka wybranych realizacji. Każda stylizacja wykonywana jest z
+            dbałością o detale, trwałość oraz indywidualne oczekiwania klientki.
+            Zapraszam również na Instagram, gdzie regularnie publikuję nowe prace.
+        </p>
 
-            <div class="gallery-grid">
+        <div class="gallery-grid">
 
-                <img src="galeria1.jpg" alt="Stylizacja paznokci 1">
-                <img src="galeria2.jpg" alt="Stylizacja paznokci 2">
-                <img src="galeria3.jpg" alt="Stylizacja paznokci 3">
-                <img src="galeria4.jpg" alt="Stylizacja paznokci 4">
-                <img src="galeria5.jpg" alt="Stylizacja paznokci 5">
-                <img src="galeria6.jpg" alt="Stylizacja paznokci 6">
-                <img src="galeria7.jpg" alt="Stylizacja paznokci 7">
-                <img src="galeria8.jpg" alt="Stylizacja paznokci 8">
-                <img src="galeria9.jpg" alt="Stylizacja paznokci 9">
-                <img src="galeria10.jpg" alt="Stylizacja paznokci 10">
-                <img src="galeria11.jpg" alt="Stylizacja paznokci 11">
-                <img src="galeria12.jpg" alt="Stylizacja paznokci 12">
-                <img src="galeria13.jpg" alt="Stylizacja paznokci 13">
-                <img src="galeria14.jpg" alt="Stylizacja paznokci 14">
-                <img src="galeria15.jpg" alt="Stylizacja paznokci 15">
-                <img src="galeria16.jpg" alt="Stylizacja paznokci 16">
-                <img src="galeria17.jpg" alt="Stylizacja paznokci 17">
-                <img src="galeria18.jpg" alt="Stylizacja paznokci 18">
-                <img src="galeria19.jpg" alt="Stylizacja paznokci 19">
-                <img src="galeria20.jpg" alt="Stylizacja paznokci 20">
-                <img src="galeria21.jpg" alt="Stylizacja paznokci 21">
-                <img src="galeria22.jpg" alt="Stylizacja paznokci 22">
-                <img src="galeria23.jpg" alt="Stylizacja paznokci 23">
-                <img src="galeria24.jpg" alt="Stylizacja paznokci 24">
-                <img src="galeria25.jpg" alt="Stylizacja paznokci 25">
-                <img src="galeria26.jpg" alt="Stylizacja paznokci 26">
-                <img src="galeria27.jpg" alt="Stylizacja paznokci 27">
-                <img src="galeria28.jpg" alt="Stylizacja paznokci 28">
-                <img src="galeria29.jpg" alt="Stylizacja paznokci 29">
-                <img src="galeria30.jpg" alt="Stylizacja paznokci 30">
-
-            </div>
+            <img src="galeria1.jpg" alt="">
+            <img src="galeria2.jpg" alt="">
+            <img src="galeria3.jpg" alt="">
+            <img src="galeria4.jpg" alt="">
+            <img src="galeria5.jpg" alt="">
+            <img src="galeria6.jpg" alt="">
+            <img src="galeria7.jpg" alt="">
+            <img src="galeria8.jpg" alt="">
+            <img src="galeria9.jpg" alt="">
+            <img src="galeria10.jpg" alt="">
+            <img src="galeria11.jpg" alt="">
+            <img src="galeria12.jpg" alt="">
+            <img src="galeria13.jpg" alt="">
+            <img src="galeria14.jpg" alt="">
+            <img src="galeria15.jpg" alt="">
+            <img src="galeria16.jpg" alt="">
+            <img src="galeria17.jpg" alt="">
+            <img src="galeria18.jpg" alt="">
+            <img src="galeria19.jpg" alt="">
+            <img src="galeria20.jpg" alt="">
+            <img src="galeria21.jpg" alt="">
+            <img src="galeria22.jpg" alt="">
+            <img src="galeria23.jpg" alt="">
+            <img src="galeria24.jpg" alt="">
+            <img src="galeria25.jpg" alt="">
+            <img src="galeria26.jpg" alt="">
+            <img src="galeria27.jpg" alt="">
+            <img src="galeria28.jpg" alt="">
+            <img src="galeria29.jpg" alt="">
+            <img src="galeria30.jpg" alt="">
 
         </div>
 
-        <a href="index.html" class="back-link">
-            ← Powrót do strony głównej
-        </a>
+        <div class="buttons">
+
+            <a href="index.html" class="button button-back">
+                ← Powrót do strony głównej
+            </a>
+
+            <a href="https://booksy.com/pl-pl/121304_no-to-pieknie-wizaz-i-kosmetyka_paznokcie_22068_bydgoszcz"
+               target="_blank"
+               class="button button-booksy">
+
+                Umów wizytę
+            </a>
+
+        </div>
 
     </div>
 
-    <footer>
-        <p>© 2026 No to pięknie! | Iwona Bieńkowska</p>
-    </footer>
+</div>
+
+<footer>
+    <p>© 2026 No to pięknie! | Iwona Bieńkowska</p>
+</footer>
 
 </body>
 </html>
