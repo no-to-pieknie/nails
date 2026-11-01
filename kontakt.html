@@ -22,6 +22,7 @@
     --gray-dark:#878375;
 
     --brown:#68484A;
+    --brown-dark:#523739;
 
     --background:#F9F6F2;
 
@@ -39,9 +40,11 @@
 body{
     margin:0;
     background:var(--background);
-    font-family:'Montserrat',sans-serif;
     color:var(--text);
+    font-family:'Montserrat',sans-serif;
 }
+
+/* HEADER */
 
 header{
     background:linear-gradient(
@@ -53,13 +56,14 @@ header{
 
     color:white;
     text-align:center;
-    padding:60px 20px;
+    padding:50px 20px;
 }
 
 header h1{
     margin:0;
     font-family:'Cormorant Garamond',serif;
     font-size:3rem;
+    font-weight:600;
     letter-spacing:4px;
 }
 
@@ -71,135 +75,60 @@ header p{
 /* CONTENT */
 
 .container{
-    max-width:1000px;
-    margin:60px auto;
+    max-width:900px;
+    margin:50px auto;
     padding:0 20px;
 }
 
-.contact-card{
+.contact-box{
     background:white;
     border-radius:25px;
-    padding:50px;
-
-    text-align:center;
+    padding:40px;
 
     border:1px solid var(--border);
 
     box-shadow:
         0 5px 15px rgba(104,72,74,.04),
         0 15px 35px rgba(104,72,74,.08);
+
+    text-align:center;
 }
 
-.profile-image{
-    width:150px;
-    height:150px;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    border:6px solid var(--cream);
-
-    margin-bottom:25px;
-}
-
-.contact-card h2{
-    margin:0;
-
-    font-family:'Cormorant Garamond',serif;
+.contact-box h2{
+    margin-top:0;
 
     color:var(--rose-dark);
 
-    font-size:3rem;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.8rem;
+    font-weight:600;
 }
 
-.intro{
+.contact-box p{
     max-width:650px;
+    margin:0 auto 40px;
 
-    margin:20px auto 40px;
-
-    line-height:1.9;
+    text-align:center;
+    line-height:1.8;
 
     color:var(--text-light);
 }
 
-/* KAFELKI */
+/* PRZYCISKI */
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 
     margin-top:20px;
 }
 
-.contact-item{
-    text-decoration:none;
-
-    background:white;
-
-    border:1px solid var(--border);
-
-    border-radius:20px;
-
-    padding:30px 20px;
-
-    color:var(--text);
-
-    transition:.3s;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.04);
-}
-
-.contact-item:hover{
-    transform:translateY(-5px);
-
-    box-shadow:
-        0 15px 25px rgba(104,72,74,.10);
-}
-
-.contact-item .icon{
-    font-size:2.5rem;
-    margin-bottom:10px;
-}
-
-.contact-item h3{
-    margin:10px 0;
-
-    font-family:'Cormorant Garamond',serif;
-    font-size:2rem;
-}
-
-.contact-item p{
-    margin:0;
-    color:var(--text-light);
-    font-size:.95rem;
-}
-
-/* BOOKSY */
-
-.contact-item.booksy{
-    background:var(--rose);
-    color:white;
-}
-
-.contact-item.booksy p{
-    color:white;
-}
-
-/* Przyciski */
-
-.bottom-buttons{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-
-    margin-top:40px;
-}
-
-.btn{
+.button{
     display:inline-block;
+
+    min-width:220px;
 
     padding:14px 28px;
 
@@ -214,19 +143,19 @@ header p{
     transition:.3s;
 }
 
-.btn-home{
+.button-back{
     background:var(--gray);
 }
 
-.btn-home:hover{
+.button-back:hover{
     background:var(--gray-dark);
 }
 
-.btn-booksy{
+.button-booksy{
     background:var(--rose);
 }
 
-.btn-booksy:hover{
+.button-booksy:hover{
     background:var(--rose-dark);
 }
 
@@ -240,36 +169,45 @@ footer{
     color:white;
 
     text-align:center;
+
     padding:25px;
+}
+
+footer p{
+    margin:0;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media (max-width:768px){
+
+    header{
+        padding:35px 15px;
+    }
 
     header h1{
         font-size:2rem;
     }
 
-    .contact-card{
+    header p{
+        font-size:.95rem;
+    }
+
+    .contact-box{
         padding:25px;
     }
 
-    .profile-image{
-        width:120px;
-        height:120px;
-    }
-
-    .contact-card h2{
+    .contact-box h2{
         font-size:2rem;
     }
 
-    .contact-grid{
-        grid-template-columns:1fr;
+    .buttons{
+        flex-direction:column;
     }
 
-    .bottom-buttons{
-        flex-direction:column;
+    .button{
+        width:100%;
+        min-width:auto;
     }
 
 }
@@ -286,57 +224,42 @@ footer{
 
 <div class="container">
 
-    <div class="contact-card">
-
-        <img src="logo.jpg" alt="Iwona Bieńkowska" class="profile-image">
+    <div class="contact-box">
 
         <h2>Iwona Bieńkowska</h2>
 
-        <p class="intro">
-            Zapraszam do kontaktu oraz rezerwacji wizyty.
-            Na bieżąco odpowiadam na wiadomości na Facebooku i Instagramie.
-            Wizytę możesz również wygodnie zarezerwować online przez Booksy.
+        <p>
+            Zapraszam do kontaktu poprzez Facebook, Instagram
+            lub rezerwację wizyty online przez Booksy.
         </p>
 
-        <div class="contact-grid">
+        <div class="buttons">
 
             <a href="https://www.facebook.com/profile.php?id=100008602985310"
                target="_blank"
-               class="contact-item">
-
-                <h3>Facebook</h3>
-                <p>Napisz wiadomość</p>
-
+               class="button button-back">
+                Facebook
             </a>
 
             <a href="https://instagram.com/notopieknie_iwonabienkowska"
                target="_blank"
-               class="contact-item">
-
-                <h3>Instagram</h3>
-                <p>Zobacz najnowsze realizacje</p>
-
+               class="button button-back">
+                Instagram
             </a>
 
             <a href="https://booksy.com/pl-pl/121304_no-to-pieknie-wizaz-i-kosmetyka_paznokcie_22068_bydgoszcz"
                target="_blank"
-               class="contact-item booksy">
-
-                <h3>Booksy</h3>
-                <p>Umów wizytę online</p>
-
+               class="button button-booksy">
+                Umów wizytę
             </a>
 
         </div>
 
-        <div class="bottom-buttons">
+        <div class="buttons">
 
-            <a href="index.html" class="btn btn-home">
-                ← Strona główna
-            </a>
-
-            <a href="galeria.html" class="btn btn-booksy">
-                Galeria prac
+            <a href="index.html"
+               class="button button-back">
+                ← Powrót do strony głównej
             </a>
 
         </div>
@@ -346,7 +269,7 @@ footer{
 </div>
 
 <footer>
-    © 2026 No to pięknie! | Iwona Bieńkowska
+    <p>© 2026 No to pięknie! | Iwona Bieńkowska</p>
 </footer>
 
 </body>
