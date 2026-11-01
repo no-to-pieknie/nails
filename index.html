@@ -12,19 +12,23 @@
 <style>
 
 :root{
-    --rose:#b59aa9;
-    --rose-dark:#927887;
+    --cream:#E4D8A8;
+    --rose:#C8A09C;
+    --rose-dark:#A27F7C;
 
-    --gray:#7d858d;
-    --gray-dark:#676f78;
+    --gray:#A3A094;
+    --gray-dark:#878375;
 
-    --background:#f5f6f7;
+    --brown:#68484A;
+    --brown-dark:#523739;
 
-    --card:#ffffff;
-    --text:#4f555a;
-    --text-light:#82888d;
+    --background:#F9F6F2;
 
-    --border:#e4e6e8;
+    --card:#FFFFFF;
+    --text:#53484A;
+    --text-light:#83777A;
+
+    --border:#ECE5DE;
 }
 
 *{
@@ -39,30 +43,24 @@ body{
     overflow-x:hidden;
 }
 
-h1,
-h2,
-h3{
+h1,h2,h3{
     font-family:'Cormorant Garamond',serif;
     letter-spacing:1px;
 }
 
-/* HERO */
-
 .hero-image{
     width:100%;
-    height:900px;
+    height:550px;
     object-fit:cover;
     display:block;
 }
 
-/* HEADER */
-
 header{
     background:linear-gradient(
-        135deg,
-        #ebe6e9 0%,
-        #d5c7cf 55%,
-        #b59aa9 100%
+        180deg,
+        var(--cream) 0%,
+        var(--rose) 50%,
+        var(--brown) 100%
     );
 
     color:white;
@@ -73,6 +71,7 @@ header{
 header h1{
     margin:0;
     font-size:3rem;
+    font-weight:600;
     letter-spacing:4px;
 }
 
@@ -81,8 +80,6 @@ header h2{
     font-size:1.2rem;
     font-weight:400;
 }
-
-/* CONTENT */
 
 .container{
     max-width:1400px;
@@ -104,8 +101,6 @@ header h2{
     flex:1;
 }
 
-/* CARDS */
-
 .profile-card,
 .links-card{
     background:var(--card);
@@ -114,8 +109,8 @@ header h2{
     border:1px solid var(--border);
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,.03),
-        0 15px 35px rgba(0,0,0,.05);
+        0 5px 15px rgba(104,72,74,.04),
+        0 15px 35px rgba(104,72,74,.08);
 }
 
 .profile-top{
@@ -130,7 +125,7 @@ header h2{
     height:140px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid #d9ccd3;
+    border:5px solid var(--cream);
 }
 
 .profile-info h2{
@@ -150,8 +145,6 @@ header h2{
     text-align:justify;
 }
 
-/* LINKS */
-
 .links-card{
     position:sticky;
     top:20px;
@@ -165,12 +158,10 @@ header h2{
 
 .links a{
     display:block;
-
     text-decoration:none;
     text-align:center;
 
     padding:16px;
-
     border-radius:14px;
 
     background:var(--gray);
@@ -188,8 +179,6 @@ header h2{
     transform:translateY(-2px);
 }
 
-/* Główny przycisk */
-
 .links a:last-child{
     background:var(--rose);
 }
@@ -198,17 +187,13 @@ header h2{
     background:var(--rose-dark);
 }
 
-/* FOOTER */
-
 footer{
     margin-top:60px;
-    background:#d8dde1;
-    color:#555;
+    background:var(--brown);
+    color:white;
     text-align:center;
     padding:25px;
 }
-
-/* MOBILE */
 
 @media (max-width:768px){
 
@@ -303,17 +288,16 @@ footer{
                 <div class="about-text">
 
                     <p>
-                        Witaj w „No to pięknie!”. To miejsce stworzone z pasji
-                        do pięknych, zadbanych i trwałych stylizacji paznokci.
+                        Witaj w „No to pięknie!”. To miejsce stworzone z pasji do pięknych,
+                        zadbanych i trwałych stylizacji paznokci.
                     </p>
 
                     <p>
-                        Każda klientka jest dla mnie wyjątkowa, dlatego stawiam
-                        na indywidualne podejście, komfort podczas wizyty oraz
-                        najwyższą staranność wykonania. Niezależnie od tego,
-                        czy szukasz klasycznej elegancji, subtelnego manicure
-                        czy bardziej efektownych zdobień, wspólnie dobierzemy
-                        stylizację dopasowaną do Twoich oczekiwań.
+                        Każda klientka jest dla mnie wyjątkowa, dlatego stawiam na indywidualne
+                        podejście, komfort podczas wizyty oraz najwyższą staranność wykonania.
+                        Niezależnie od tego, czy szukasz klasycznej elegancji, subtelnego manicure
+                        czy bardziej efektownych zdobień, wspólnie dobierzemy stylizację
+                        dopasowaną do Twoich oczekiwań.
                     </p>
 
                     <p>
