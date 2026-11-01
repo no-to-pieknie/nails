@@ -11,6 +11,16 @@
     
 <style>
 
+:root{
+    --primary:#D89ACF;
+    --primary-dark:#C17CB6;
+    --accent:#F2DCCF;
+    --bg:#FCF8FA;
+    --card:#FFFFFF;
+    --text:#5E5263;
+    --text-light:#8D7D92;
+}
+
 *{
     box-sizing:border-box;
 }
@@ -18,8 +28,8 @@
 body{
     margin:0;
     font-family:'Montserrat',sans-serif;
-    background:#f6faf7;
-    color:#4f5f57;
+    background:var(--bg);
+    color:var(--text);
     overflow-x:hidden;
 }
 
@@ -38,29 +48,36 @@ h3{
 }
 
 header{
-    background:#7ea696;
+    background:linear-gradient(
+        135deg,
+        #F2DCCF 0%,
+        #EAC6D8 45%,
+        #D89ACF 100%
+    );
     color:white;
     text-align:center;
-    padding:30px 20px;
+    padding:35px 20px;
+    box-shadow:0 5px 20px rgba(216,154,207,.25);
 }
 
 header h1{
     margin:0;
     font-size:3rem;
-    font-weight:600;
-    letter-spacing:2px;
+    font-weight:700;
+    letter-spacing:3px;
 }
 
-header p{
-    margin-top:8px;
-    font-size:1rem;
+header h2{
+    margin-top:10px;
+    font-size:1.3rem;
+    font-weight:500;
 }
 
 .container{
     width:100%;
     max-width:1400px;
     margin:0 auto;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
 .content{
@@ -79,10 +96,11 @@ header p{
 
 .profile-card,
 .links-card{
-    background:white;
+    background:var(--card);
     border-radius:25px;
     padding:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    box-shadow:0 10px 30px rgba(216,154,207,.12);
+    border:1px solid rgba(216,154,207,.15);
 }
 
 .profile-top{
@@ -97,25 +115,24 @@ header p{
     height:140px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid #dfece5;
+    border:6px solid var(--accent);
 }
 
 .profile-info h2{
     margin:0;
-    font-size:2rem;
-    font-weight:600;
+    font-size:2.2rem;
+    color:var(--primary-dark);
 }
 
 .profile-info p{
     margin-top:8px;
-    color:#7a8780;
+    color:var(--text-light);
 }
 
 .about-text{
     line-height:1.9;
     font-size:16px;
     text-align:justify;
-    hyphens:auto;
 }
 
 .links-card{
@@ -137,7 +154,11 @@ header p{
 .links a{
     display:block;
     text-decoration:none;
-    background:#7ea696;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
     color:white;
     padding:16px;
     border-radius:15px;
@@ -145,22 +166,21 @@ header p{
     font-weight:600;
     letter-spacing:0.5px;
     transition:all .3s ease;
-    box-shadow:0 4px 10px rgba(126,166,150,.25);
+    box-shadow:0 8px 20px rgba(216,154,207,.30);
 }
 
 .links a:hover{
-    background:#6b9583;
     transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(216,154,207,.40);
 }
 
 footer{
     margin-top:60px;
     text-align:center;
-    padding:20px;
-    background:#dfece5;
+    padding:25px;
+    background:var(--accent);
+    color:var(--text);
 }
-
-/* TELEFONY */
 
 @media (max-width:768px){
 
@@ -176,8 +196,8 @@ footer{
         font-size:2rem;
     }
 
-    header p{
-        font-size:0.9rem;
+    header h2{
+        font-size:1rem;
     }
 
     .container{
