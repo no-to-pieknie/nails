@@ -8,18 +8,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
 <style>
 
 :root{
-    --primary:#AA93A0;      /* przygaszony pudrowy róż */
-    --primary-dark:#8E7884;
-    --accent:#D8D3D0;       /* jasny szaro-beżowy */
-    --bg:#F7F5F3;
-    --card:#FFFFFF;
-    --text:#4D5053;
-    --text-light:#7B7E81;
-    --shadow:rgba(0,0,0,.06);
+    --rose:#b59aa9;
+    --rose-dark:#927887;
+
+    --gray:#7d858d;
+    --gray-dark:#676f78;
+
+    --background:#f5f6f7;
+
+    --card:#ffffff;
+    --text:#4f555a;
+    --text-light:#82888d;
+
+    --border:#e4e6e8;
 }
 
 *{
@@ -29,15 +34,19 @@
 body{
     margin:0;
     font-family:'Montserrat',sans-serif;
-    background:var(--bg);
+    background:var(--background);
     color:var(--text);
     overflow-x:hidden;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3{
     font-family:'Cormorant Garamond',serif;
     letter-spacing:1px;
 }
+
+/* HERO */
 
 .hero-image{
     width:100%;
@@ -46,34 +55,36 @@ h1,h2,h3{
     display:block;
 }
 
+/* HEADER */
+
 header{
     background:linear-gradient(
         135deg,
-        #E8E2DE 0%,
-        #D9D4D1 50%,
-        #B19CA8 100%
+        #ebe6e9 0%,
+        #d5c7cf 55%,
+        #b59aa9 100%
     );
 
     color:white;
     text-align:center;
-    padding:35px 20px;
+    padding:40px 20px;
 }
 
 header h1{
     margin:0;
     font-size:3rem;
-    font-weight:600;
-    letter-spacing:3px;
+    letter-spacing:4px;
 }
 
 header h2{
     margin-top:10px;
-    font-size:1.3rem;
+    font-size:1.2rem;
     font-weight:400;
 }
 
+/* CONTENT */
+
 .container{
-    width:100%;
     max-width:1400px;
     margin:0 auto;
     padding:50px 20px;
@@ -93,13 +104,18 @@ header h2{
     flex:1;
 }
 
+/* CARDS */
+
 .profile-card,
 .links-card{
-    background:white;
+    background:var(--card);
     border-radius:25px;
-    padding:30px;
-    border:1px solid #E7E3E1;
-    box-shadow:0 10px 25px var(--shadow);
+    padding:35px;
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.03),
+        0 15px 35px rgba(0,0,0,.05);
 }
 
 .profile-top{
@@ -114,13 +130,13 @@ header h2{
     height:140px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid var(--accent);
+    border:5px solid #d9ccd3;
 }
 
 .profile-info h2{
     margin:0;
-    font-size:2rem;
-    color:var(--primary-dark);
+    font-size:2.2rem;
+    color:var(--rose-dark);
 }
 
 .profile-info p{
@@ -133,6 +149,8 @@ header h2{
     font-size:16px;
     text-align:justify;
 }
+
+/* LINKS */
 
 .links-card{
     position:sticky;
@@ -147,41 +165,59 @@ header h2{
 
 .links a{
     display:block;
+
     text-decoration:none;
-    background:#7F858A;
-    color:white;
-    padding:16px;
-    border-radius:15px;
     text-align:center;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:var(--gray);
+    color:white;
+
     font-weight:600;
-    letter-spacing:.5px;
-    transition:.3s;
-    box-shadow:0 5px 15px rgba(127,133,138,.25);
+
+    transition:.3s ease;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
 }
 
 .links a:hover{
-    background:#676C71;
+    background:var(--gray-dark);
     transform:translateY(-2px);
 }
 
-footer{
-    margin-top:60px;
-    text-align:center;
-    padding:25px;
-    background:#D8D3D0;
-    color:#4D5053;
+/* Główny przycisk */
+
+.links a:last-child{
+    background:var(--rose);
 }
 
-/* TELEFONY */
+.links a:last-child:hover{
+    background:var(--rose-dark);
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+    background:#d8dde1;
+    color:#555;
+    text-align:center;
+    padding:25px;
+}
+
+/* MOBILE */
 
 @media (max-width:768px){
 
     .hero-image{
-        height:220px;
+        height:250px;
     }
 
     header{
-        padding:20px 15px;
+        padding:25px 15px;
     }
 
     header h1{
@@ -230,7 +266,6 @@ footer{
 
     .about-text{
         text-align:left;
-        font-size:15px;
     }
 }
 
@@ -275,10 +310,10 @@ footer{
                     <p>
                         Każda klientka jest dla mnie wyjątkowa, dlatego stawiam
                         na indywidualne podejście, komfort podczas wizyty oraz
-                        najwyższą staranność wykonania. Niezależnie od tego, czy 
-                        szukasz klasycznej elegancji, subtelnego manicure czy 
-                        bardziej efektownych zdobień, wspólnie dobierzemy 
-                        stylizację dopasowaną do Twoich  oczekiwań.
+                        najwyższą staranność wykonania. Niezależnie od tego,
+                        czy szukasz klasycznej elegancji, subtelnego manicure
+                        czy bardziej efektownych zdobień, wspólnie dobierzemy
+                        stylizację dopasowaną do Twoich oczekiwań.
                     </p>
 
                     <p>
