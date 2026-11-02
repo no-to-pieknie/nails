@@ -37,23 +37,12 @@
 
 body{
     margin:0;
-    font-family:'Montserrat',sans-serif;
     background:var(--background);
     color:var(--text);
-    overflow-x:hidden;
+    font-family:'Montserrat',sans-serif;
 }
 
-h1,h2,h3{
-    font-family:'Cormorant Garamond',serif;
-    letter-spacing:1px;
-}
-
-.hero-image{
-    width:100%;
-    height:900px;
-    object-fit:cover;
-    display:block;
-}
+/* HEADER */
 
 header{
     background:linear-gradient(
@@ -62,50 +51,36 @@ header{
         var(--rose) 50%,
         var(--brown) 100%
     );
-
     color:white;
     text-align:center;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
 header h1{
     margin:0;
+    font-family:'Cormorant Garamond',serif;
     font-size:3rem;
     font-weight:600;
     letter-spacing:4px;
 }
 
-header h2{
-    margin-top:10px;
-    font-size:1.2rem;
-    font-weight:400;
+header p{
+    margin-top:12px;
+    font-size:1.1rem;
 }
+
+/* CONTENT */
 
 .container{
-    max-width:1400px;
-    margin:0 auto;
-    padding:50px 20px;
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px;
 }
 
-.content{
-    display:flex;
-    gap:30px;
-    align-items:flex-start;
-}
-
-.about{
-    flex:3;
-}
-
-.links-section{
-    flex:1;
-}
-
-.profile-card,
-.links-card{
-    background:var(--card);
+.price-box{
+    background:white;
     border-radius:25px;
-    padding:35px;
+    padding:40px;
     border:1px solid var(--border);
 
     box-shadow:
@@ -113,79 +88,100 @@ header h2{
         0 15px 35px rgba(104,72,74,.08);
 }
 
-.profile-top{
+.price-box h2{
+    text-align:center;
+    margin-top:0;
+
+    color:var(--rose-dark);
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.8rem;
+}
+
+.price-box p{
+    text-align:center;
+    color:var(--text-light);
+    line-height:1.8;
+    max-width:800px;
+    margin:0 auto 40px;
+}
+
+/* CENNIK */
+
+.price-section{
+    margin-bottom:40px;
+}
+
+.price-section h3{
+    color:var(--brown);
+    border-bottom:1px solid var(--border);
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+.price-item{
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    gap:25px;
-    margin-bottom:25px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #f0ece8;
 }
 
-.profile-top img{
-    width:140px;
-    height:140px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid var(--cream);
+.price-item:last-child{
+    border-bottom:none;
 }
 
-.profile-info h2{
-    margin:0;
-    font-size:2.2rem;
+.service{
+    font-weight:500;
+}
+
+.price{
+    font-weight:700;
     color:var(--rose-dark);
 }
 
-.profile-info p{
-    margin-top:8px;
-    color:var(--text-light);
-}
+/* BUTTONS */
 
-.about-text{
-    line-height:1.9;
-    font-size:16px;
-    text-align:justify;
-}
-
-.links-card{
-    position:sticky;
-    top:20px;
-}
-
-.links{
+.buttons{
     display:flex;
-    flex-direction:column;
+    justify-content:center;
     gap:15px;
+    flex-wrap:wrap;
+    margin-top:40px;
 }
 
-.links a{
-    display:block;
-    text-decoration:none;
-    text-align:center;
+.button{
+    display:inline-block;
+    padding:14px 28px;
 
-    padding:16px;
     border-radius:14px;
+    text-decoration:none;
 
-    background:var(--gray);
     color:white;
-
     font-weight:600;
 
-    transition:.3s ease;
-
-    box-shadow:0 6px 15px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.links a:hover{
+.button-back{
+    background:var(--gray);
+}
+
+.button-back:hover{
     background:var(--gray-dark);
-    transform:translateY(-2px);
 }
 
-.links a:last-child{
+.button-booksy{
     background:var(--rose);
 }
 
-.links a:last-child:hover{
+.button-booksy:hover{
     background:var(--rose-dark);
 }
+
+/* FOOTER */
 
 footer{
     margin-top:60px;
@@ -195,63 +191,36 @@ footer{
     padding:25px;
 }
 
-@media (max-width:768px){
+footer p{
+    margin:0;
+}
 
-    .hero-image{
-        height:250px;
-    }
+/* MOBILE */
 
-    header{
-        padding:25px 15px;
-    }
+@media(max-width:768px){
 
     header h1{
         font-size:2rem;
     }
 
-    header h2{
-        font-size:1rem;
-    }
-
-    .container{
-        padding:20px 15px;
-    }
-
-    .content{
-        flex-direction:column;
-    }
-
-    .about,
-    .links-section{
-        width:100%;
-    }
-
-    .profile-top{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .profile-top img{
-        width:120px;
-        height:120px;
-    }
-
-    .profile-info h2{
-        font-size:1.8rem;
-    }
-
-    .links-card{
-        position:static;
-    }
-
-    .profile-card,
-    .links-card{
+    .price-box{
         padding:20px;
     }
 
-    .about-text{
-        text-align:left;
+    .price-box h2{
+        font-size:2rem;
     }
+
+    .price-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:5px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
 }
 
 </style>
