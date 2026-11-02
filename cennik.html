@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cennik | No to pięknie!</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --cream:#E4D8A8;
+    --rose:#C8A09C;
+    --rose-dark:#A27F7C;
+
+    --gray:#A3A094;
+    --gray-dark:#878375;
+
+    --brown:#68484A;
+    --brown-dark:#523739;
+
+    --background:#F9F6F2;
+
+    --card:#FFFFFF;
+    --text:#53484A;
+    --text-light:#83777A;
+
+    --border:#ECE5DE;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:var(--background);
+    color:var(--text);
+    font-family:'Montserrat',sans-serif;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(
+        180deg,
+        var(--cream) 0%,
+        var(--rose) 50%,
+        var(--brown) 100%
+    );
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    margin:0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    font-weight:600;
+    letter-spacing:4px;
+}
+
+header p{
+    margin-top:12px;
+    font-size:1.1rem;
+}
+
+/* CONTENT */
+
+.container{
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.price-box{
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    border:1px solid var(--border);
+
+    box-shadow:
+        0 5px 15px rgba(104,72,74,.04),
+        0 15px 35px rgba(104,72,74,.08);
+}
+
+.price-box h2{
+    text-align:center;
+    margin-top:0;
+
+    color:var(--rose-dark);
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.8rem;
+}
+
+.price-box p{
+    text-align:center;
+    color:var(--text-light);
+    line-height:1.8;
+    max-width:800px;
+    margin:0 auto 40px;
+}
+
+/* CENNIK */
+
+.price-section{
+    margin-bottom:40px;
+}
+
+.price-section h3{
+    color:var(--brown);
+    border-bottom:1px solid var(--border);
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+.price-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #f0ece8;
+}
+
+.price-item:last-child{
+    border-bottom:none;
+}
+
+.service{
+    font-weight:500;
+}
+
+.price{
+    font-weight:700;
+    color:var(--rose-dark);
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.button{
+    display:inline-block;
+    padding:14px 28px;
+
+    border-radius:14px;
+    text-decoration:none;
+
+    color:white;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.button-back{
+    background:var(--gray);
+}
+
+.button-back:hover{
+    background:var(--gray-dark);
+}
+
+.button-booksy{
+    background:var(--rose);
+}
+
+.button-booksy:hover{
+    background:var(--rose-dark);
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+    background:var(--brown);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer p{
+    margin:0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .price-box{
+        padding:20px;
+    }
+
+    .price-box h2{
+        font-size:2rem;
+    }
+
+    .price-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:5px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CENNIK</h1>
+    <p>No to pięknie! • Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</p>
+</header>
+
+<div class="container">
+
+    <div class="price-box">
+
+        <h2>Aktualny cennik usług</h2>
+
+        <p>
+            Poniżej znajdziesz aktualne ceny oferowanych usług.
+            Szczegóły oraz dostępne terminy sprawdzisz również podczas rezerwacji online.
+        </p>
+
+        <!-- PAZNOKCIE -->
+
+        <div class="price-section">
+
+            <h3>Stylizacja paznokci</h3>
+
+            <div class="price-item">
+                <span class="service">Manicure hybrydowy</span>
+                <span class="price">XX zł</span>
+            </div>
+
+            <div class="price-item">
+                <span class="service">Przedłużenie paznokci żelem</span>
+                <span class="price">XX zł</span>
+            </div>
+
+            <div class="price-item">
+                <span class="service">Uzupełnienie żelu</span>
+                <span class="price">XX zł</span>
+            </div>
+
+            <div class="price-item">
+                <span class="service">Zdjęcie stylizacji</span>
+                <span class="price">XX zł</span>
+            </div>
+
+        </div>
+
+        <!-- MAKIJAZ -->
+
+        <div class="price-section">
+
+            <h3>Makijaż</h3>
+
+            <div class="price-item">
+                <span class="service">Makijaż okazjonalny</span>
+                <span class="price">XX zł</span>
+            </div>
+
+            <div class="price-item">
+                <span class="service">Makijaż ślubny</span>
+                <span class="price">XX zł</span>
+            </div>
+
+            <div class="price-item">
+                <span class="service">Makijaż próbny</span>
+                <span class="price">XX zł</span>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <a href="index.html" class="button button-back">
+                ← Powrót do strony głównej
+            </a>
+
+            <a href="https://booksy.com/pl-pl/121304_no-to-pieknie-wizaz-i-kosmetyka_paznokcie_22068_bydgoszcz"
+               target="_blank"
+               class="button button-booksy">
+
+                Umów wizytę
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 No to pięknie! | Iwona Bieńkowska</p>
+</footer>
+
+</body>
+</html>
