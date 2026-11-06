@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,6 +17,12 @@
     --cream:#E4D8A8;
     --rose:#C8A09C;
     --rose-dark:#A27F7C;
+
+    --peach:#FBEEE7;
+    --peach-dark:#F5DDD3;
+    --script:#D79B9C;
+    --mauve:#7B5D60;
+    --sage:#A9B09E;
 
     --gray:#A3A094;
     --gray-dark:#878375;
@@ -47,29 +53,38 @@ body{
 /* HEADER */
 
 header{
+    position:relative;
+
     background:linear-gradient(
         180deg,
-        var(--cream) 0%,
-        var(--rose) 50%,
-        var(--brown) 100%
+        var(--peach) 0%,
+        var(--peach-dark) 100%
     );
 
-    color:white;
     text-align:center;
-    padding:50px 20px;
+    padding:55px 20px 60px;
+
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:40px;
+
+    border-bottom:6px solid var(--sage);
 }
 
 header h1{
     margin:0;
-    font-family:'Cormorant Garamond',serif;
-    font-size:3rem;
-    font-weight:600;
-    letter-spacing:4px;
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    font-weight:400;
+    line-height:1.1;
+    color:var(--script);
 }
 
 header p{
-    margin-top:12px;
+    margin:14px 0 0;
+    font-family:'DM Sans',sans-serif;
     font-size:1.1rem;
+    font-weight:500;
+    color:var(--mauve);
 }
 
 /* CONTENT */
@@ -182,11 +197,13 @@ footer p{
 @media (max-width:768px){
 
     header{
-        padding:35px 15px;
+        padding:35px 15px 40px;
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius:30px;
     }
 
     header h1{
-        font-size:2rem;
+        font-size:3.4rem;
     }
 
     header p{
@@ -218,7 +235,7 @@ footer p{
 <body>
 
 <header>
-    <h1>KONTAKT</h1>
+    <h1>Kontakt</h1>
     <p>No to pięknie! • Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</p>
 </header>
 
