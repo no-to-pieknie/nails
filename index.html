@@ -45,46 +45,32 @@ body{
 
 .hero-image{
     width:100%;
-    height:500px;
-    object-fit:cover;
+    height:auto;
     display:block;
 
     border-bottom-left-radius:40px;
     border-bottom-right-radius:40px;
 }
 
-.hero-overlay{
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-
-    padding:60px 20px;
-
+.hero-text{
+    display:none;
     text-align:center;
-    color:white;
-
-    background:linear-gradient(
-        to top,
-        rgba(104,72,74,.95),
-        rgba(200,160,156,.75),
-        rgba(200,160,156,0)
-    );
+    padding:25px 15px 0;
 }
 
-.hero-overlay h1{
+.hero-text h1{
     margin:0;
     font-family:'Cormorant Garamond',serif;
-    font-size:4.5rem;
-    letter-spacing:6px;
-    text-shadow:0 4px 12px rgba(0,0,0,.35);
+    font-size:2.3rem;
+    letter-spacing:2px;
+    color:var(--brown);
 }
 
-.hero-overlay h2{
-    margin:15px 0 0;
-    font-size:1.2rem;
+.hero-text h2{
+    margin:10px 0 0;
+    font-size:.95rem;
     font-weight:400;
-    text-shadow:0 2px 10px rgba(0,0,0,.35);
+    color:var(--text-light);
 }
 
 /* CONTENT */
@@ -185,21 +171,8 @@ footer{
 
 @media(max-width:768px){
 
-    .hero-image{
-        height:350px;
-    }
-
-    .hero-overlay{
-        padding:30px 15px;
-    }
-
-    .hero-overlay h1{
-        font-size:2.3rem;
-        letter-spacing:2px;
-    }
-
-    .hero-overlay h2{
-        font-size:.95rem;
+    .hero-text{
+        display:block;
     }
 
     .content{
@@ -229,9 +202,9 @@ footer{
 
 <section class="hero">
 
-    <img src="paznokcie.jpg" alt="Stylizacja paznokci" class="hero-image">
+    <img src="paznokcie.jpg" alt="No to pięknie! Stylizacja paznokci, makijaż okazjonalny, Bydgoszcz" class="hero-image">
 
-    <div class="hero-overlay">
+    <div class="hero-text">
         <h1>NO TO PIĘKNIE!</h1>
         <h2>Stylizacja paznokci • Makijaż okazjonalny • Bydgoszcz</h2>
     </div>
