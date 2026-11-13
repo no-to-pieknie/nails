@@ -9,34 +9,30 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --cream:#E4D8A8;
-    --rose:#C8A09C;
-    --rose-dark:#A27F7C;
+    --blush:#F8E6E2;
+    --blush-dark:#EDCFCA;
+    --wine:#76484E;
+    --gold:#D4B483;
 
-    --peach:#FBEEE7;
-    --peach-dark:#F5DDD3;
-    --script:#D79B9C;
-    --mauve:#7B5D60;
-    --sage:#A9B09E;
+    --rose:#C48C94;
+    --rose-dark:#A56D75;
 
     --gray:#A3A094;
     --gray-dark:#878375;
 
     --brown:#68484A;
-    --brown-dark:#523739;
 
-    --background:#F9F6F2;
+    --background:#FAF5F2;
 
-    --card:#FFFFFF;
     --text:#53484A;
     --text-light:#83777A;
 
-    --border:#ECE5DE;
+    --border:#EEDFDB;
 }
 
 *{
@@ -57,8 +53,8 @@ header{
 
     background:linear-gradient(
         180deg,
-        var(--peach) 0%,
-        var(--peach-dark) 100%
+        var(--blush) 0%,
+        var(--blush-dark) 100%
     );
 
     text-align:center;
@@ -67,24 +63,35 @@ header{
     border-bottom-left-radius:40px;
     border-bottom-right-radius:40px;
 
-    border-bottom:6px solid var(--sage);
+    border-bottom:5px solid var(--gold);
 }
 
 header h1{
     margin:0;
-    font-family:'Great Vibes',cursive;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
     font-size:5rem;
-    font-weight:400;
+    font-weight:600;
     line-height:1.1;
-    color:var(--script);
+    color:var(--wine);
 }
 
 header p{
-    margin:14px 0 0;
-    font-family:'DM Sans',sans-serif;
-    font-size:1.1rem;
+    margin:16px 0 0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.4rem;
     font-weight:500;
-    color:var(--mauve);
+    color:var(--wine);
+}
+
+header p::after{
+    content:"";
+    display:block;
+    width:260px;
+    max-width:60%;
+    height:1px;
+    margin:18px auto 0;
+    background:var(--rose);
 }
 
 /* CONTENT */
@@ -103,8 +110,8 @@ header p{
     border:1px solid var(--border);
 
     box-shadow:
-        0 5px 15px rgba(104,72,74,.04),
-        0 15px 35px rgba(104,72,74,.08);
+        0 5px 15px rgba(118,72,78,.04),
+        0 15px 35px rgba(118,72,78,.08);
 
     text-align:center;
 }
@@ -112,7 +119,7 @@ header p{
 .contact-box h2{
     margin-top:0;
 
-    color:var(--rose-dark);
+    color:var(--wine);
 
     font-family:'Cormorant Garamond',serif;
     font-size:2.8rem;
@@ -192,6 +199,7 @@ footer{
 footer p{
     margin:0;
 }
+
 /* MOBILE */
 
 @media (max-width:768px){
@@ -203,11 +211,11 @@ footer p{
     }
 
     header h1{
-        font-size:3.4rem;
+        font-size:3.2rem;
     }
 
     header p{
-        font-size:.95rem;
+        font-size:1.1rem;
     }
 
     .contact-box{
